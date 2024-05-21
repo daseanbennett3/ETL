@@ -1,35 +1,24 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
+# In[1]:
 #CLEANING THE DATA (1-7)
 #1 connect to kaggle to download from it
 get_ipython().system('pip install kaggle')
 import kaggle
 
-
-# In[ ]:
-
-
+# In[2]:
 #2 Download the orders.csv file from https://www.kaggle.com/datasets/ankitbansal06/retail-orders
 get_ipython().system('kaggle datasets download ankitbansal06/retail-orders -f orders.csv')
 
-
-# In[4]:
-
-
+# In[3]:
 #3 "Extract all" from the orders.csv.zip
 import zipfile
 zip_ref = zipfile.ZipFile('orders.csv.zip') 
 zip_ref.extractall()
 zip_ref.close()
 
-
 # In[11]:
-
-
 #Read data from the file
 import pandas as pd
 df = pd.read_csv('orders.csv')
@@ -37,7 +26,6 @@ df = pd.read_csv('orders.csv')
 df.head(20)
 #Disply the unique/distinct values in the Ship Mode column
 df['Ship Mode'].unique()
-
 #3 Turn any value with "Not Available" and "unknown" to null values
 df = pd.read_csv('orders.csv',na_values=['Not Available','unknown'])
 df['Ship Mode'].unique()
@@ -119,7 +107,15 @@ df.to_sql('df_orders', con=conn , index=False, if_exists = 'append')
 
 
 # In[ ]:
-
-
+#Replace the data types of the data (in SQL):
+#1. DROP TABLE df_orders
+#2. CREATE TABLE df_orders
+      [order_id] INT PRIMARY KEY,
+      [order_date] DATE,
+      [ship_mode] VARCHAR(20),
+      ...
+#3In python, run:
+df.to_sql('df_orders', con=conn , index=False, if_exists = 'append')
+#4 SELECT * FROM df_orders (refresh if needed)
 
 
