@@ -1,4 +1,8 @@
 # WORK-IN-PROGRESS
+EXTRACT the data from Kaggle APU
+TRANSFORM or "clean" the data in python
+LOAD the data into SQL Server 
+
 Go to Kaggle.com
 Profile
 Settings
