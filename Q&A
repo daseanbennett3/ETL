@@ -9,7 +9,7 @@
                     GROUP BY region, product_id
                     )
                     SELECT * FROM (
-                                   SELECT * , row_number() over(partition by region
-                                                                             ORDER BY sales DESC) AS row_num
+                                   SELECT * , ROW_NUMBER() OVER(PARTITION BY region
+                                                                ORDER BY sales DESC) AS row_num
                                   FROM CTE) A
                     WHERE row_num <=5
