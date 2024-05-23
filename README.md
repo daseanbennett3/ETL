@@ -1,4 +1,4 @@
-# WORK-IN-PROGRESS
+# STEP-BY-STEP CODE
 1. EXTRACT the data from Kaggle APU
 2. TRANSFORM or "clean" the data in python
 3. LOAD the data into SQL Server 
