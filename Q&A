@@ -10,9 +10,9 @@
                     )
                     SELECT * FROM (
                                    SELECT *, ROW_NUMBER() OVER(PARTITION BY region
-                                                                ORDER BY sales DESC) AS row_num
-                                  FROM CTE) A
-                    WHERE row_num <=5
+                                                                ORDER BY sales DESC) AS row_num FROM CTE
+                                  ) A
+                    WHERE row_num <= 5
 --3. WHAT IS THE MONTH OVER MONTH GROWTH COMPARISON FOR 2022 AND 2023 SALES?
         WITH CTE AS (
                     SELECT YEAR(order_date) AS order_year, MONTH(order_date) AS order_month, SUM(sale_price) AS sales FROM df_orders
@@ -28,3 +28,12 @@
                     GROUP BY order_month
                     ORDER BY order_month
 --4. WHICH MONTH HAD THE HIGHEST SALE FOR EACH CATEGORY?
+        WITH CTE AS (
+                    SELECT category, FORMAT(order_date,'MM-yyyy') AS order_month_year, SUM(sale_price) AS sales FROM df_orders
+                    GROUP BY category, FORMAT(order_date,'MM-yyyy')
+                    )
+                    SELECT * FROM (
+                                  SELECT *, ROW_NUMBER() OVER(PARTITION BY category
+                                                              ORDER BY sales DESC) AS row_num FROM CTE
+                                  ) A
+                    WHERE row_num = 1
