@@ -1,2 +1,15 @@
-ANALYZE THE DATA WITH SOME POTENTIAL QUESTIONS
--- WHAT WERE THE TOP 10 HIGHEST GROSSING PRODUCTS? 
+--ANALYZE THE DATA WITH SOME POTENTIAL QUESTIONS--
+-- 1. WHAT WERE THE TOP 10 HIGHEST GROSSING PRODUCTS (BASE ON THE SUM OF ALL SALE_PRICES)? 
+        SELECT TOP 10 product_id, SUM(sale_price) AS sales FROM df_orders
+        GROUP BY product_id
+        ORDER BY sales DESC
+-- 2. WHAT ARE THE TOP 5 SELLING PRODUCTS IN EACH REGION (USE COMMON TABLE EXPRESSION)
+        WITH CTE AS (
+                    SELECT region, product_id, SUM(sale_price) AS sales FROM df_orders
+                    GROUP BY region, product_id
+                    )
+                    SELECT * FROM (
+                                   SELECT * , row_number() over(partition by region
+                                                                             ORDER BY sales DESC) AS row_num
+                                  FROM CTE) A
+                    WHERE row_num <=5
