@@ -4,8 +4,9 @@
 3. LOAD the data into SQL Server 
 
 EXTRACT
-Go to Kaggle.com -- Profile -- Settings -- Create New Token
+Go to Kaggle.com -- Profile -- Settings -- Create New Token (A kaggle.json file should be downloaded)
 Copy the downloaded kaggle.json file and place it in: This PC -- Windows -- Users -- DaSean -- kaggle
-Download Anaconda Navigator
+Download Anaconda Navigator and then Lauch Juoyter Notebook
+Go to Documents -- 
 
 
