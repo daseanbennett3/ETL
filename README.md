@@ -16,6 +16,5 @@ Refer to the "CLEANING THE DATA (1-8)" section in the JUPYTER-PYTHON-CODE
 
 LOAD
 *load the data from the csv file to MySQL Server*
-Refer to the "" section from the "JUPYTER-PYTHON-CODE" in order to first connect the MySQL Server
-The refeer to the "LOAD THE DATA INTO THE DATABASE (1-2)" section in the "JUPYTER-PYTHON-CODE" to load the data in the MySQL Server
-
+Refer to the "CONNECT TO THE DATA (1-3)" section from the "JUPYTER-PYTHON-CODE" in order to first connect the MySQL Server
+The refer to the "LOAD THE DATA INTO THE DATABASE (1-2)" section in the "JUPYTER-PYTHON-CODE" to load the data in the MySQL Server
