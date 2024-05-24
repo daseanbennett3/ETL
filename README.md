@@ -12,7 +12,10 @@ Go to Documents -- Create a Folder named "SQL + Python" -- In that folder create
 
 TRANSFORM
 *Clean the data by changing data types, renaming columns, and adding new columns with different calculations*
-Refer to the "#CLEANING THE DATA (1-8)" section in the JUPYTER-PYTHON-CODE
+Refer to the "CLEANING THE DATA (1-8)" section in the JUPYTER-PYTHON-CODE
 
 LOAD
+*load the data from the csv file to MySQL Server*
+Refer to the "" section from the "JUPYTER-PYTHON-CODE" in order to first connect the MySQL Server
+The refeer to the "LOAD THE DATA INTO THE DATABASE (1-2)" section in the "JUPYTER-PYTHON-CODE" to load the data in the MySQL Server
 
