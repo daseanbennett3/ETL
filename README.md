@@ -1,2 +1,2 @@
-# TITLE: Extracting, Loading, & Transfomring Sales Data
+# TITLE: Extracting, Loading, & Transforming Sales Data
 # DESCRIPTION:
