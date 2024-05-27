@@ -1,3 +1,10 @@
 # TITLE: Extracting, Loading, & Transforming Sales Data
 # DESCRIPTION:
-In this project I found an interesting data set on Kaggle.com that I wanted to further investigate. The data had information on different orders that a company had received during the years of 2022 and 2023. The Orders table has information on the shipping date, the product ordered, the date, ect. I initially used python code in Jupyter Notebook to doen the dataset from kaggle.com and then I extarcted the zip file. I made some edits to the file such as adding and deleteing necessary and useless columns respectively. After cleaning the data I connected to a SQL Server daattabse and uploaed the newly transformed data to it. 
+In this project I found an interesting data set on Kaggle.com that I wanted to further investigate. The data had information on different orders that a company had received during the years of 2022 and 2023. The Orders table contains information on the shipping date, the product ordered, the date order, ect.
+I started this project using python code in Jupyter Notebook to download the dataset from kaggle.com.
+I extarcted the Orders.CSV file from the zip file.
+I made some edits/cleaned up the data by adding and deleteing necessary and useless columns, respectively.
+After cleaning the data, I then connected to a SQL Server datatabse and uploaed the newly transformed data to Microsoft's SQL Server Management Studio. 
+From there I ran queries to answer some posible questions that a viewer might have.
+The questions and their respective answers can be found in my 
+
