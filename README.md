@@ -1,4 +1,4 @@
-# TITLE: Extracting, Loading, & Transforming Sales Data
+# TITLE: Extracting, Transforming, & Loading Sales Data
 # DESCRIPTION:
 In this project I found an interesting data set on Kaggle.com that I wanted to further investigate. The data had information on different orders that a company had received during the years of 2022 and 2023. The Orders table contains information on the shipping date, the product ordered, the date order, etc.
 
